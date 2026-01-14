@@ -3,238 +3,788 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yapce Ventures | Business Profile</title>
-  <meta name="description" content="Yapce Ventures is a Johannesburg-based consulting firm turning complexity into operational clarity." />
-  <meta name="author" content="Yapce Ventures" />
-
+  <title>Yapce Ventures | Clarity. Structure. Momentum.</title>
+  <meta name="description" content="Strategic consulting for organisations that need things to work better — not louder." />
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1f2933;
-      --muted: #6b7280;
-      --accent: #111827;
-      --border: #e5e7eb;
-    }
-
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
+    :root {
+      --bg: #0a0a0a;
+      --text: #ffffff;
+      --muted: #a0a0a0;
+      --accent: #ffffff;
+      --border: #2a2a2a;
+      --card-bg: #121212;
+      --hover: #1a1a1a;
+    }
+
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Inter, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 64px 24px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    header h1 {
-      font-size: 2.6rem;
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-    }
-
-    header p.tagline {
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-
-    header p.subtitle {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    section {
-      margin-bottom: 48px;
-      padding-bottom: 32px;
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
       border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
     }
 
-    section:last-child {
-      border-bottom: none;
+    nav.scrolled {
+      background: rgba(10, 10, 10, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
-    h2 {
-      font-size: 1.1rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      color: var(--accent);
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    p {
-      max-width: 760px;
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: opacity 0.3s;
     }
 
-    ul {
-      margin-top: 8px;
-      padding-left: 18px;
+    .logo:hover {
+      opacity: 0.8;
     }
 
-    li {
-      margin-bottom: 6px;
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .service-box {
-      border: 1px solid var(--border);
-      padding: 20px;
-    }
-
-    .service-box h3 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 64px;
-      font-weight: 600;
-    }
-
-    footer span {
-      display: block;
-      margin-top: 8px;
+    .nav-links a {
       color: var(--muted);
-      font-weight: 400;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+      cursor: pointer;
     }
 
-    @media (max-width: 640px) {
-      header h1 {
-        font-size: 2.1rem;
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .mobile-toggle span {
+      width: 25px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0 40px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 1;
+      max-width: 1000px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
       }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 30px;
+      line-height: 1.1;
+    }
+
+    .hero .tagline {
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: var(--muted);
+      max-width: 800px;
+      margin: 0 auto 50px;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 18px 40px;
+      border: 2px solid var(--text);
+      background: transparent;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: var(--text);
+      color: var(--bg);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn.secondary {
+      border-color: var(--muted);
+      color: var(--muted);
+    }
+
+    .btn.secondary:hover {
+      background: var(--muted);
+      border-color: var(--muted);
+      color: var(--bg);
+    }
+
+    /* Sections */
+    section {
+      padding: 120px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .section-header p {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Problem Section */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .problem-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 40px 30px;
+      transition: all 0.4s ease;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--text), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .problem-card:hover::before {
+      transform: translateX(100%);
+    }
+
+    .problem-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--text);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .problem-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 50px 40px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+      transition: all 0.4s ease;
+    }
+
+    .service-card:hover .service-icon {
+      transform: rotate(360deg);
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .service-card li {
+      padding: 10px 0;
+      padding-left: 20px;
+      position: relative;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .service-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--text);
+    }
+
+    .service-card:hover li {
+      color: var(--text);
+    }
+
+    /* How We Work */
+    .work-process {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 900px;
+      margin: 60px auto 0;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideIn 0.8s ease-out forwards;
+    }
+
+    .process-step:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .process-step:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .step-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--border);
+      min-width: 80px;
+    }
+
+    .step-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .step-content p {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 100px 40px;
+      text-align: center;
+      margin: 80px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section p {
+      font-size: 1.3rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .footer-tagline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .copyright {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        padding: 40px;
+        gap: 30px;
+        transition: left 0.3s ease;
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .mobile-toggle {
+        display: flex;
+      }
+
+      .mobile-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+
+      section {
+        padding: 80px 20px;
+      }
+
+      .hero {
+        padding: 0 20px;
+      }
+
+      .cta-section {
+        margin: 40px 20px;
+        padding: 60px 20px;
+      }
+
+      .services-grid,
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step {
+        flex-direction: column;
+      }
+
+      .step-number {
+        min-width: auto;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
     }
   </style>
 </head>
 <body>
 
-  <main class="container">
+  <nav id="nav">
+    <div class="nav-container">
+      <div class="logo" onclick="scrollToSection('hero')">YAPCE VENTURES</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a onclick="scrollToSection('problem')">Challenge</a></li>
+        <li><a onclick="scrollToSection('services')">Services</a></li>
+        <li><a onclick="scrollToSection('approach')">Approach</a></li>
+        <li><a onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
-    <header>
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
       <h1>YAPCE VENTURES</h1>
       <p class="tagline">Clarity. Structure. Momentum.</p>
       <p class="subtitle">
-        Strategic Consulting for Organisations That Need Things to Work Better — Not Louder.
+        Strategic consulting for organisations that need things to work better — not louder.
+        We turn complexity into operational clarity.
       </p>
-    </header>
+      <div class="cta-buttons">
+        <a class="btn" onclick="scrollToSection('services')">Explore Services</a>
+        <a class="btn secondary" onclick="scrollToSection('contact')">Get in Touch</a>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Who We Are</h2>
-      <p>
-        Yapce Ventures is an independent business and operations consultancy based in Johannesburg,
-        serving growth-stage organisations across South Africa. We help leaders untangle complexity,
-        sharpen execution, and build systems that hold under pressure.
-      </p>
-    </section>
-
-    <section>
+  <section id="problem">
+    <div class="section-header">
       <h2>The Problem We Solve</h2>
-      <p>
-        Most organisations don’t fail from lack of ideas. They stall because of fragmented operations,
-        unclear ownership, inefficient workflows, and strategy that never quite lands in reality.
-        Noise increases. Results don’t.
-      </p>
-    </section>
+      <p>Most organisations don't fail from lack of ideas. They stall because execution fractures under real-world pressure.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h3>Fragmented Operations</h3>
+        <p>Disconnected processes that slow everything down and create unnecessary friction across teams.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Unclear Ownership</h3>
+        <p>Everyone's responsible, so no one's accountable. Decisions drift and momentum dies.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Strategy That Never Lands</h3>
+        <p>Vision statements that sound great in the boardroom but evaporate in day-to-day reality.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Misaligned Teams</h3>
+        <p>People pulling in different directions. Energy gets spent, but nothing actually moves forward.</p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Our Value Proposition</h2>
-      <p>
-        We turn complexity into operational clarity. Yapce Ventures bridges the gap between
-        strategy and execution, vision and day-to-day reality, and people and process —
-        so decisions move faster and leadership regains control.
-      </p>
-    </section>
+  <section id="services">
+    <div class="section-header">
+      <h2>How We Help</h2>
+      <p>Practical, embedded support across the areas where execution breaks down.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚙</div>
+        <h3>Business & Operations</h3>
+        <p>We optimize processes, improve efficiency, and build systems that actually work.</p>
+        <ul>
+          <li>Process optimisation</li>
+          <li>Operational efficiency reviews</li>
+          <li>Service delivery improvement</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◆</div>
+        <h3>Project & Change</h3>
+        <p>Structure for projects that are stuck. Support for changes that need to stick.</p>
+        <ul>
+          <li>Project recovery & structure</li>
+          <li>Change management support</li>
+          <li>Cross-team alignment</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◉</div>
+        <h3>Brand & Customer Experience</h3>
+        <p>Clarity in positioning. Consistency in delivery. Connection with customers.</p>
+        <ul>
+          <li>Brand positioning clarity</li>
+          <li>Customer journey refinement</li>
+          <li>Marketing operations support</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">▲</div>
+        <h3>Leadership & Advisory</h3>
+        <p>Strategic thinking support for leaders who need clarity without the noise.</p>
+        <ul>
+          <li>Decision-making frameworks</li>
+          <li>Management coaching</li>
+          <li>Stakeholder alignment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Core Services</h2>
-      <div class="services">
-        <div class="service-box">
-          <h3>Business & Operations Consulting</h3>
-          <ul>
-            <li>Process optimisation</li>
-            <li>Operational efficiency reviews</li>
-            <li>Service delivery improvement</li>
-          </ul>
-        </div>
-
-        <div class="service-box">
-          <h3>Project & Change Enablement</h3>
-          <ul>
-            <li>Project recovery & structure</li>
-            <li>Change management support</li>
-            <li>Cross-team alignment</li>
-          </ul>
-        </div>
-
-        <div class="service-box">
-          <h3>Brand, Marketing & CX</h3>
-          <ul>
-            <li>Brand positioning clarity</li>
-            <li>Customer journey refinement</li>
-            <li>Marketing operations support</li>
-          </ul>
-        </div>
-
-        <div class="service-box">
-          <h3>Advisory & Leadership Support</h3>
-          <ul>
-            <li>Decision-making frameworks</li>
-            <li>Management coaching</li>
-            <li>Stakeholder alignment</li>
-          </ul>
+  <section id="approach">
+    <div class="section-header">
+      <h2>How We Work</h2>
+      <p>Practical. Embedded. Human. No jargon theatre. Just progress that holds under pressure.</p>
+    </div>
+    <div class="work-process">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Diagnose Before Prescribe</h3>
+          <p>We don't bring cookie-cutter solutions. We understand the reality of your situation first — the friction points, the misalignments, the patterns holding you back.</p>
         </div>
       </div>
-    </section>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Work With Teams, Not Over Them</h3>
+          <p>Sustainable change happens when people own it. We embed, collaborate, and build capacity — not dependency.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Design for Real Life</h3>
+          <p>Solutions that look good on slides but collapse under pressure aren't solutions. We build for the complexity and constraints of actual operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>How We Work</h2>
-      <p>
-        Practical, embedded, and human. We diagnose before prescribing, work with teams rather than
-        over them, and design solutions that survive real life. No jargon theatre. No bloated decks.
-        Just progress.
-      </p>
-    </section>
+  <div class="cta-section" id="contact">
+    <h2>Ready for Clarity?</h2>
+    <p>Let's talk about where friction is slowing you down — and how to remove it.</p>
+    <a href="mailto:hello@yapceventures.com" class="btn">Start a Conversation</a>
+  </div>
 
-    <section>
-      <h2>Ideal Clients</h2>
-      <p>
-        SMEs, growth-stage businesses, leadership teams in transition, and organisations experiencing
-        operational drag who need clarity — not reinvention.
-      </p>
-    </section>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">YAPCE VENTURES</div>
+      <div class="footer-tagline">Where strategy becomes operational reality.</div>
+      <div class="footer-links">
+        <a href="mailto:hello@yapceventures.com">Contact</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Services</a>
+      </div>
+      <div class="copyright">
+        © 2026 Yapce Ventures · Johannesburg, South Africa
+      </div>
+    </div>
+  </footer>
 
-    <section>
-      <h2>The Result</h2>
-      <p>
-        Clear ownership. Cleaner processes. Faster decisions. Reduced friction.
-        Sustainable execution.
-      </p>
-    </section>
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
 
-    <footer>
-      Where strategy becomes operational reality.
-      <span>Yapce Ventures · Johannesburg, South Africa</span>
-    </footer>
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileToggle.addEventListener('click', () => {
+      mobileToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
 
-  </main>
+    // Smooth scroll function
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      // Close mobile menu if open
+      mobileToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards
+    document.querySelectorAll('.problem-card, .service-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
 
 </body>
 </html>
