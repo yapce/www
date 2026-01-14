@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Yapce Ventures | Strategic Business Consulting | Johannesburg</title>
+  <meta name="title" content="Yapce Ventures | Strategic Business Consulting | Johannesburg">
+  <meta name="description" content="Yapce Ventures helps South African organisations turn complexity into operational clarity. Expert business consulting, operations optimization, and leadership advisory in Johannesburg.">
+  <meta name="keywords" content="business consulting Johannesburg, operations consulting South Africa, strategic consulting, change management, business operations, leadership advisory, project management consulting">
+  <meta name="author" content="Yapce Ventures">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yapceventures.com/">
+  <meta property="og:title" content="Yapce Ventures | Clarity. Structure. Momentum.">
+  <meta property="og:description" content="Strategic consulting for organisations that need things to work better — not louder. Based in Johannesburg, South Africa.">
+  <meta property="og:image" content="https://yapceventures.com/assets/og-image.jpg">
+  <meta property="og:site_name" content="Yapce Ventures">
+  <meta property="og:locale" content="en_ZA">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yapceventures.com/">
+  <meta property="twitter:title" content="Yapce Ventures | Clarity. Structure. Momentum.">
+  <meta property="twitter:description" content="Strategic consulting for organisations that need things to work better — not louder.">
+  <meta property="twitter:image" content="https://yapceventures.com/assets/og-image.jpg">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yapceventures.com/">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Yapce Ventures",
+    "image": "https://yapceventures.com/assets/favicon.png",
+    "description": "Strategic business and operations consulting firm specializing in operational clarity, execution alignment, and leadership support.",
+    "url": "https://yapceventures.com",
+    "telephone": "+27843547979",
+    "email": "tula@yapceventures.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Johannesburg",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.2041,
+      "longitude": 28.0473
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Tula Yapce",
+      "email": "tula@yapceventures.com",
+      "url": "https://linkedin.com/in/tula-yapce-678975164"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/tula-yapce-678975164"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "South Africa"
+    },
+    "serviceType": [
+      "Business Consulting",
+      "Operations Consulting",
+      "Change Management",
+      "Leadership Advisory",
+      "Project Management"
+    ]
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0a0a0a;
+      --text: #ffffff;
+      --muted: #a0a0a0;
+      --accent: #ffffff;
+      --border: #2a2a2a;
+      --card-bg: #121212;
+      --hover: #1a1a1a;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Skip to main content for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--text);
+      color: var(--bg);
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(10, 10, 10, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .logo:hover {
+      opacity: 0.8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: var(--text);
+      outline: none;
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px;
+    }
+
+    .mobile-toggle span {
+      width: 25px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0 40px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 1;
+      max-width: 1000px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 30px;
+      line-height: 1.1;
+    }
+
+    .hero .tagline {
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: var(--muted);
+      max-width: 800px;
+      margin: 0 auto 50px;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 18px 40px;
+      border: 2px solid var(--text);
+      background: transparent;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: var(--text);
+      color: var(--bg);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+      outline: 2px solid var(--text);
+      outline-offset: 2px;
+    }
+
+    .btn.secondary {
+      border-color: var(--muted);
+      color: var(--muted);
+    }
+
+    .btn.secondary:hover,
+    .btn.secondary:focus {
+      background: var(--muted);
+      border-color: var(--muted);
+      color: var(--bg);
+      outline-color: var(--muted);
+    }
+
+    /* Sections */
+    section {
+      padding: 120px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .section-header p {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Problem Section */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .problem-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 40px 30px;
+      transition: all 0.4s ease;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--text), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .problem-card:hover::before {
+      transform: translateX(100%);
+    }
+
+    .problem-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--text);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .problem-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 50px 40px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+      transition: all 0.4s ease;
+    }
+
+    .service-card:hover .service-icon {
+      transform: rotate(360deg);
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .service-card li {
+      padding: 10px 0;
+      padding-left: 20px;
+      position: relative;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .service-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--text);
+    }
+
+    .service-card:hover li {
+      color: var(--text);
+    }
+
+    /* How We Work */
+    .work-process {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 900px;
+      margin: 60px auto 0;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideIn 0.8s ease-out forwards;
+    }
+
+    .process-step:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .process-step:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .step-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--border);
+      min-width: 80px;
+    }
+
+    .step-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .step-content p {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 100px 40px;
+      text-align: center;
+      margin: 80px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section p {
+      font-size: 1.3rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-methods {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: var(--hover);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      border-color: var(--text);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .footer-tagline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      color: var(--text);
+    }
+
+    .copyright {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        padding: 40px;
+        gap: 30px;
+        transition: left 0.3s ease;
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .mobile-toggle {
+        display: flex;
+      }
+
+      .mobile-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+
+      section {
+        padding: 80px 20px;
+      }
+
+      .hero {
+        padding: 0 20px;
+      }
+
+      .cta-section {
+        margin: 40px 20px;
+        padding: 60px 20px;
+      }
+
+      .services-grid,
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step {
+        flex-direction: column;
+      }
+
+      .step-number {
+        min-width: auto;
+      }
+
+      .contact-methods {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    /* Loading state */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    .loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Loading Screen -->
+  <div class="loading" id="loading">
+    <div class="footer-logo">YV</div>
+  </div>
+
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo" onclick="scrollToSection('hero')" role="button" tabindex="0" aria-label="Yapce Ventures Home">YAPCE VENTURES</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a onclick="scrollToSection('problem')" role="button" tabindex="0">Challenge</a></li>
+        <li><a onclick="scrollToSection('services')" role="button" tabindex="0">Services</a></li>
+        <li><a onclick="scrollToSection('approach')" role="button" tabindex="0">Approach</a></li>
+        <li><a onclick="scrollToSection('contact')" role="button" tabindex="0">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>YAPCE VENTURES</h1>
+        <p class="tagline">Clarity. Structure. Momentum.</p>
+        <p class="subtitle">
+          Strategic consulting for organisations that need things to work better — not louder.
+          We turn complexity into operational clarity.
+        </p>
+        <div class="cta-buttons">
+          <a class="btn" onclick="scrollToSection('services')" role="button" tabindex="0">Explore Services</a>
+          <a class="btn secondary" onclick="scrollToSection('contact')" role="button" tabindex="0">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem">
+      <div class="section-header">
+        <h2>The Problem We Solve</h2>
+        <p>Most organisations don't fail from lack of ideas. They stall because execution fractures under real-world pressure.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card">
+          <h3>Fragmented Operations</h3>
+          <p>Disconnected processes that slow everything down and create unnecessary friction across teams.</p>
+        </article>
+        <article class="problem-card">
+          <h3>Unclear Ownership</h3>
+          <p>Everyone's responsible, so no one's accountable. Decisions drift and momentum dies.</p>
+        </article>
+        <article class="problem-card">
+          <h3>Strategy That Never Lands</h3>
+          <p>Vision statements that sound great in the boardroom but evaporate in day-to-day reality.</p>
+        </article>
+        <article class="problem-card">
+          <h3>Misaligned Teams</h3>
+          <p>People pulling in different directions. Energy gets spent, but nothing actually moves forward.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-header">
+        <h2>How We Help</h2>
+        <p>Practical, embedded support across the areas where execution breaks down.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⚙</div>
+          <h3>Business & Operations</h3>
+          <p>We optimize processes, improve efficiency, and build systems that actually work.</p>
+          <ul>
+            <li>Process optimisation</li>
+            <li>Operational efficiency reviews</li>
+            <li>Service delivery improvement</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">◆</div>
+          <h3>Project & Change</h3>
+          <p>Structure for projects that are stuck. Support for changes that need to stick.</p>
+          <ul>
+            <li>Project recovery & structure</li>
+            <li>Change management support</li>
+            <li>Cross-team alignment</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">◉</div>
+          <h3>Brand & Customer Experience</h3>
+          <p>Clarity in positioning. Consistency in delivery. Connection with customers.</p>
+          <ul>
+            <li>Brand positioning clarity</li>
+            <li>Customer journey refinement</li>
+            <li>Marketing operations support</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">▲</div>
+          <h3>Leadership & Advisory</h3>
+          <p>Strategic thinking support for leaders who need clarity without the noise.</p>
+          <ul>
+            <li>Decision-making frameworks</li>
+            <li>Management coaching</li>
+            <li>Stakeholder alignment</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="section-header">
+        <h2>How We Work</h2>
+        <p>Practical. Embedded. Human. No jargon theatre. Just progress that holds under pressure.</p>
+      </div>
+      <div class="work-process">
+        <article class="process-step">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-content">
+            <h3>Diagnose Before Prescribe</h3>
+            <p>We don't bring cookie-cutter solutions. We understand the reality of your situation first — the friction points, the misalignments, the patterns holding you back.</p>
+          </div>
+        </article>
+        <article class="process-step">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-content">
+            <h3>Work With Teams, Not Over Them</h3>
+            <p>Sustainable change happens when people own it. We embed, collaborate, and build capacity — not dependency.</p>
+          </div>
+        </article>
+        <article class="process-step">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-content">
+            <h3>Design for Real Life</h3>
+            <p>Solutions that look good on slides but collapse under pressure aren't solutions. We build for the complexity and constraints of actual operations.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <h2>Ready for Clarity?</h2>
+      <p>Let's talk about where friction is slowing you down — and how to remove it.</p>
+      <div class="contact-methods">
+        <a href="mailto:tula@yapceventures.com" class="contact-link" aria-label="Email Tula Yapce">
+          <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          tula@yapceventures.com
+        </a>
+        <a href="https://wa.me/27843547979" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Tula Yapce">
+          <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2
